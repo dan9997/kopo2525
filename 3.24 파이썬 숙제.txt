@@ -5,7 +5,8 @@ A = 5.5 * 5.5 * PI
 A2 = 10 * 4 * (1 / 2)
 B = 9 * 5 * (1 /2 )
 
-print(A, A2, B)
+print(A)
+print(A2, B)
 print(A == B)
 
 
