@@ -1,0 +1,23 @@
+i = 1
+j = 1
+
+while i <= 9:
+  while j <= 9:
+    print(str(i) + ' X ' + str(j) + ' = ' + str(i * j))
+    j = j+2
+  i = i+2
+  j = 1
+  
+print('구구단 홀수')
+
+i = 2
+j = 2
+
+while i <= 9:
+  while j <= 9:
+    print(str(i) + ' X ' + str(j) + ' = ' + str(i * j))
+    j = j+2
+  i = i+2
+  j = 2
+
+print('구구단 짝수')
