@@ -14,7 +14,7 @@ avg = 92
 kor = 95
 mat = 88
 eng = 90
-sin
+sin = 0
 
 sin = avg*4 - kor - eng - mat
 print(sin)
