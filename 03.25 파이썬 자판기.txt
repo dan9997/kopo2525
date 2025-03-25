@@ -1,7 +1,7 @@
 while True:
     print('음료목록 1.오렌지주스(100원), 2.커피(200원), 3.콜라(300원)')
-    coin = int(input('동전을 넣으세요.'))
-    drink = int(input('음료를 고르세요. \n '))
+    coin = int(input('동전을 넣으세요.\n'))
+    drink = int(input('음료를 고르세요.\n'))
 
     if drink == 1: # orange
         price = 100
@@ -24,3 +24,4 @@ while True:
     else:
         print('잔액이 부족해 잔액을 반환합니다. 돈을 더 넣어주세요.\n')
         coin = 0 # won reset
+        
