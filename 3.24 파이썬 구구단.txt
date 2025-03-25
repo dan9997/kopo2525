@@ -1,23 +1,25 @@
+
+
+#이중 while문 홀수단 출력 곱도 홀수, 짝수단 출력, 곱도 짝수
+
+print('구구단 홀수 ')
+
 i = 1
 j = 1
-
 while i <= 9:
   while j <= 9:
     print(str(i) + ' X ' + str(j) + ' = ' + str(i * j))
     j = j+2
   i = i+2
   j = 1
-  
-print('구구단 홀수')
+
+print('\n구구단 짝수')
 
 i = 2
 j = 2
-
 while i <= 9:
   while j <= 9:
     print(str(i) + ' X ' + str(j) + ' = ' + str(i * j))
     j = j+2
   i = i+2
   j = 2
-
-print('구구단 짝수')
