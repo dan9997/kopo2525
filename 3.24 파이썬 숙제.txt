@@ -1,0 +1,20 @@
+PI = 3.14
+
+A=5.5 * 5.5 * PI
+
+A2= 10* 4* (1/2)
+B = 9*5*(1/2)
+
+print(A, A2, B)
+print(A==B)
+
+
+
+avg = 92
+kor = 95
+mat = 88
+eng = 90
+sin
+
+sin = avg*4 - kor - eng - mat
+print(sin)
