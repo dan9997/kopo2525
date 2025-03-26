@@ -5,4 +5,4 @@ if(n > 0):
    print(str('*')*j)
    j = j+1
 elif(n <= 0):
- print('0이나 음수값 입력 불가')
+ print('1보다 작은 값 입력 불가.')
