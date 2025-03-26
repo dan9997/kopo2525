@@ -1,8 +1,8 @@
 while True:
     print('음료목록 1.오렌지주스(100원), 2.커피(200원), 3.콜라(300원)')
-    coin = int(input('동전을 넣으세요.\n'))
+    coin = float(input('동전을 넣으세요.\n'))
     
-    if(coin>0):
+    if(coin>0 and coin == int):
      drink = int(input('음료를 고르세요.\n'))
      if drink == 1: # orange
          price = 100
@@ -16,8 +16,11 @@ while True:
      else: # wrong menu
          print('없는 메뉴입니다. 다시 입력해 주세요.\n')
          continue # 메뉴 선택부터 다시 시작
+    elif(coin == float):
+      print('정수만 입력 가능합니다.')
+      continue
     else:
-      print('1 보다 작은 값을 넣을 수 없습니다.')
+      print('1보다 작은 값 입력할 수 없습니다.')
       continue
 
     if coin >= price:
