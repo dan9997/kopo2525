@@ -1,20 +1,24 @@
 while True:
     print('음료목록 1.오렌지주스(100원), 2.커피(200원), 3.콜라(300원)')
     coin = int(input('동전을 넣으세요.\n'))
-    drink = int(input('음료를 고르세요.\n'))
-
-    if drink == 1: # orange
-        price = 100
-        drinkName = '오렌지주스'
-    elif drink == 2: # coffee
-        price = 200
-        drinkName = '커피'
-    elif drink == 3: # cola
-        price = 300
-        drinkName = '콜라'
-    else: # wrong menu
-        print('없는 메뉴입니다. 다시 입력해 주세요.\n')
-        continue # 메뉴 선택부터 다시 시작
+    
+    if(coin<=0):
+      print('0 보다 작은 값을 넣을 수 없습니다.')
+      continue
+    else:
+     drink = int(input('음료를 고르세요.\n'))
+     if drink == 1: # orange
+         price = 100
+         drinkName = '오렌지주스'
+     elif drink == 2: # coffee
+         price = 200
+         drinkName = '커피'
+     elif drink == 3: # cola
+         price = 300
+         drinkName = '콜라'
+     else: # wrong menu
+         print('없는 메뉴입니다. 다시 입력해 주세요.\n')
+         continue # 메뉴 선택부터 다시 시작
 
     if coin >= price:
         remain = coin - price
