@@ -12,10 +12,11 @@ if(n > 0 and n % 1 == 0):
       val = val - m
       count = count + 1
     else:
+      count = count + 1 # If the value is negative, it counts, so count + 1
       break
 
  for i in range(0, count): # Number output per line as many lines
-   for q in range(count-1, 0 , -1):# Blank output to shape
+   for q in range(count-1, 0 , -1): # Blank output to shape
      print(' ', end = "")
    count = count - 1
 
