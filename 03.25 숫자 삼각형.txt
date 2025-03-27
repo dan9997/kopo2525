@@ -5,6 +5,7 @@ if(n > 0 and n % 1 == 0):
  cnt = 1 # show numbers
  count = 0 # print ' '
  val = int(n)
+
  for k in range(int(n)):
     if(val >= 0):
       m = m + 2
@@ -15,7 +16,6 @@ if(n > 0 and n % 1 == 0):
       break
 
  for i in range(0, count): 
-
    for q in range(count, 0 , -1):
      print(' ', end = "")
    count = count - 1
