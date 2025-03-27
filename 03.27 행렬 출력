@@ -1,0 +1,13 @@
+row = float(input('행을 입력하세요 : \n'))
+com = float(input('열을 입력하세요 : \n'))
+
+if((row > 0 and com > 0) and (row % 1 == 0 and com % 1 == 0)):
+ print('\n행렬 출력\n')
+ for i in range (int(row)):
+   for j in range (int(com)): 
+     print(str(i + 1), end = "")
+     i = i + 1
+   print('')
+else:
+  print('다시 입력')
+ 
