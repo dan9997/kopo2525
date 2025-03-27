@@ -1,6 +1,6 @@
 
-tupleDrink = '오렌지주스', '커피', '콜라'
-tuplePrice = 100, 200, 300
+tuple_drink = '오렌지주스', '커피', '콜라'
+tuple_price = 100, 200, 300
 
 
 while True:
@@ -10,14 +10,14 @@ while True:
     if(coin>0 and coin % 1 == 0):
       drink = int(input('음료를 고르세요.\n'))
       if drink == 1: # orange
-         price = tuplePrice[0]
-         drinkName = tupleDrink[0]
+         price = tuple_price[0]
+         drinkName = tuple_drink[0]
       elif drink == 2: # coffee
-         price = tuplePrice[1]
-         drinkName = tupleDrink[1]
+         price = tuple_price[1]
+         drinkName = tuple_drink[1]
       elif drink == 3: # cola
-         price = tuplePrice[2]
-         drinkName = tupleDrink[2]
+         price = tuple_price[2]
+         drinkName = tuple_drink[2]
       else: # wrong menu
          print('없는 메뉴입니다. 다시 입력해 주세요.\n')
          continue # 메뉴 선택부터 다시 시작
