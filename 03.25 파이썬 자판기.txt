@@ -1,22 +1,27 @@
+
+tupleDrink = '오렌지주스', '커피', '콜라'
+tuplePrice = 100, 200, 300
+
+
 while True:
     print('음료목록 1.오렌지주스(100원), 2.커피(200원), 3.콜라(300원)')
     coin = float(input('동전을 넣으세요.\n'))
     
-    if(coin>0 and coin == int):
-     drink = int(input('음료를 고르세요.\n'))
-     if drink == 1: # orange
-         price = 100
-         drinkName = '오렌지주스'
-     elif drink == 2: # coffee
-         price = 200
-         drinkName = '커피'
-     elif drink == 3: # cola
-         price = 300
-         drinkName = '콜라'
-     else: # wrong menu
+    if(coin>0 and coin % 1 == 0):
+      drink = int(input('음료를 고르세요.\n'))
+      if drink == 1: # orange
+         price = tuplePrice[0]
+         drinkName = tupleDrink[0]
+      elif drink == 2: # coffee
+         price = tuplePrice[1]
+         drinkName = tupleDrink[1]
+      elif drink == 3: # cola
+         price = tuplePrice[2]
+         drinkName = tupleDrink[2]
+      else: # wrong menu
          print('없는 메뉴입니다. 다시 입력해 주세요.\n')
          continue # 메뉴 선택부터 다시 시작
-    elif(coin == float):
+    elif(coin % 1 != 0):
       print('정수만 입력 가능합니다.')
       continue
     else:
@@ -26,7 +31,7 @@ while True:
     if coin >= price:
         remain = coin - price
         print('{}가 곧 제공됩니다.'.format(drinkName))
-        print('거스름돈은 {}원입니다.\n'.format(remain))
+        print('거스름돈은 {}원입니다.\n'.format(int(remain)))
         coin = 0 # won reset
     else:
         print('잔액이 부족해 잔액을 반환합니다. 돈을 더 넣어주세요.\n')
