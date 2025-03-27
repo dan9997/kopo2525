@@ -4,19 +4,18 @@ if(n > 0 and n % 1 == 0):
  m = 1 # set count
  cnt = 1 # show numbers
  count = 0 # print ' '
-
+ val = int(n)
  for k in range(int(n)):
-    val = int(n)
-
-    if(m < int(n + 1)):
+    if(val >= 0):
       m = m + 2
-      val = val - 2
+      val = val - m
       count = count + 1
 
     else:
       break
 
- for i in range(0, int(n)): 
+ for i in range(0, count): 
+
    for q in range(count, 0 , -1):
      print(' ', end = "")
    count = count - 1
@@ -29,7 +28,7 @@ if(n > 0 and n % 1 == 0):
      cnt = cnt + 1 
 
    j = j + 2
-   print(' ')
+   print('')
 
 else:
  print('실수, 1보다 작은 값 입력 불가.')
