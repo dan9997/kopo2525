@@ -1,33 +1,32 @@
 n = float(input('숫자 입력: '))
 if(n > 0 and n % 1 == 0):
  j = 1 # count show numbers
- m = 1 # set count
  cnt = 1 # show numbers
- count = 0 # print ' '
- val = int(n)
+ count = 0 # line val
+ val = int(n)# Variables to store values for calculating lines
+ m = 1 # 1,3,5,7.....
 
- for k in range(int(n)):
+ for k in range(int(n)): # To calculate the number of lines do -1 -3 -5...
     if(val >= 0):
       m = m + 2
       val = val - m
       count = count + 1
-
     else:
       break
 
- for i in range(0, count): 
-   for q in range(count, 0 , -1):
+ for i in range(0, count): # Number output per line as many lines
+   for q in range(count-1, 0 , -1):# Blank output to shape
      print(' ', end = "")
    count = count - 1
 
-   for aw in range(j):
+   for aw in range(j): # Repeat as many numbers as you print
      if(cnt == int(n + 1)):
        break
 
-     print(str(cnt),end = "")
+     print(str(cnt),end = "") # numeric output
      cnt = cnt + 1 
 
-   j = j + 2
+   j = j + 2 # Number of numbers output per line +2
    print('')
 
 else:
