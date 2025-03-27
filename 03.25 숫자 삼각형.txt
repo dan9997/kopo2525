@@ -24,7 +24,7 @@ if(n > 0 and n % 1 == 0):
      if(cnt == int(n + 1)):
        break
 
-     print(str(cnt),end = "") # numeric output
+     print(str(cnt), end = "") # numeric output
      cnt = cnt + 1 
 
    j = j + 2 # Number of numbers output per line +2
