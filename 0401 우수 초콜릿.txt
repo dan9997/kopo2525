@@ -8,7 +8,7 @@ print(data)
 ratings_mean = data[:, 3].mean()
 print(ratings_mean)
 
-high_level = data[data[:,3 ] >= 4]
+high_level = data[data[:, 3] >= 4]
 high_id = high_level[:, 0].astype(np.int64)
 print('우수 초콜릿 수:', high_id.size)
 print(high_id)
