@@ -12,7 +12,7 @@ list1 = list([['C1', '인공지능개론', 'R1', 3],
               ])
 
 df = pd.DataFrame(list1, columns = col_names)
-df.to_csv('./timetable.csv',header = True, index=False,
+df.to_csv('./timetable.csv',header = True, index = False,
           encoding = 'utf-8')
 
 df2 = pd.read_csv('./timetable.csv', sep=',')
