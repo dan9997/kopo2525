@@ -1,15 +1,15 @@
 def interest_year(p, r, n):
-  return p * (1+r)**n
+  return p * (1 + r) * * n
 
 
 
 print('예금, 금리, 몇년 입력:')
 
 
-p = int(input('예금:'))
-r = float(input('금리:'))
-n = int(input('몇년:'))
+p = int(input('예금: '))
+r = float(input('금리: '))
+n = int(input('몇년: '))
 
 result = interest_year(p, r, n)
 
-print('원금: {0}, 이자: {1}'.format(p, result-p))
+print('원금: {0}, 이자: {1}'.format(p, result - p))
