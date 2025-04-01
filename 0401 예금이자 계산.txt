@@ -1,9 +1,14 @@
 def interest_year(p, r, n):
   return p * (1+r)**n
 
-p = 30000000
-r = 0.051
-n = 3
+
+
+print('예금, 금리, 몇년 입력:')
+
+
+p = int(input('예금:'))
+r = float(input('금리:'))
+n = int(input('몇년:'))
 
 result = interest_year(p, r, n)
 
