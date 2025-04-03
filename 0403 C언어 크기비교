@@ -10,13 +10,6 @@ int main()
     result = (a + c) * c - (a - b) / c ;
     
     printf("%d",result);
-    
-	
-	0----숙제---
-	
-	
-	int a = 10;
-	if (a < 10){
-	printf("a는 10보다 작다.");}
-	
-	return 0;
+
+ return 0;
+}
