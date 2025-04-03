@@ -3,7 +3,7 @@
 #include <time.h>
 void main()
 {		
-int num2 = 99, temp = 0, temp2 = 0;
+int temp = 0, temp2 = 0;
     double num[6];
     
     srand(time(NULL));
