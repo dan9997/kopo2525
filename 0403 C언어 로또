@@ -30,7 +30,7 @@ int temp = 0;
     }
     
     for(int i = 0; i < 6; i++){
-        printf("%d ", (int)num[i]);
+        printf("%d ", num[i]);
     }
 
 }
