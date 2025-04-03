@@ -3,18 +3,18 @@
 #include <time.h>
 void main()
 {		
-int temp = 0, temp2 = 0;
-    double num[6];
+int temp = 0;
+    int num[6];
     
     srand(time(NULL));
     
     for (int i = 0; i < 6; i++){
         num[i] = (rand() % 45) + 1;
-        printf("%d\n",(int)num[i]);
+        printf("%d\n",num[i]);
         
         for(int j = 0; j < i; j++){
-            if(num[j] == num[i] && (num[j] != 0))
-                {i = i - 1;}
+            if(num[j] == num[i])
+                i--;
         }
     sleep(1);
     }
@@ -22,9 +22,9 @@ int temp = 0, temp2 = 0;
     for(int i = 0; i < 6; i++){
         for(int j = 0; j < 6; j++){
             if(num[i] < num[j]){
-                temp2 = num[j];
+                temp = num[j];
                 num[j] = num[i];
-                num[i] = temp2;
+                num[i] = temp;
             }
         }
     }
