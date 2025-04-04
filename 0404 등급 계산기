@@ -3,30 +3,28 @@
 int main()
 {
 
-	int a = 0;
+	double a = 0;
 
-	scanf_s("%d", &a);
+	scanf_s("%lf", &a);
 
-	if (a > 0 && a % 1 == 0) {
-	    if (a >= 90) {
-		    a = a * 1.1;
-		    printf("A등급! 점수: %d \n", a);
-	    }
-	    else if (a >= 80) {
-		    a = a * 1.05;
-		    printf("B등급! 점수: %d \n", a);
-	    }
-	    else if (a >= 70) {
-	    	printf("C등급! 점수: %d \n", a);
-	    }
-	    else if (a >= 60) {
-	     	printf("D등급! 점수: %d \n", a);
-	    }
-	    else {
-		    printf("F등급! 점수: %d \n", a);
-	    }
-	}
-	else
-		printf("퇴학\n");
+	
+		if (a >= 90) {
+			a = a * 1.1;
+			printf("A등급! 점수: %lf \n", a);
+		}
+		else if (a >= 80) {
+			a = a * 1.05;
+			printf("B등급! 점수: %lf \n", a);
+		}
+		else if (a >= 70) {
+			printf("C등급! 점수: %lf \n", a);
+		}
+		else if (a >= 60) {
+			printf("D등급! 점수: %lf \n", a);
+		}
+		else {
+			printf("F등급! 점수: %lf \n", a);
+		}
+	
 	return 0;
 }
