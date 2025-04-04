@@ -5,7 +5,7 @@ int main()
 
 	double a = 0;
 	char c;
-	scanf_s("%lf", &a);
+	scanf("%lf", &a);
 
 	
 		if (a >= 90) {
