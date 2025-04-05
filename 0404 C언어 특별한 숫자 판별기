@@ -5,7 +5,7 @@ int main()
 
 	int a = 0;
 	int a2, a3, a4;
-	scanf_s("%d", &a);
+	scanf("%d", &a);
 
 
 	a2 = a % 10;
