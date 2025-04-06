@@ -5,9 +5,8 @@ int main()
 
 	int a = 0;
 	scanf_s("%d", &a);
-	
-	if (0 <= a < 10) {
-		switch (a) {
+
+    switch (a) {
 		case 0:
 			printf("A");
 			break;
@@ -41,11 +40,6 @@ int main()
 		default:
 			printf("잘못된 입력입니다!");
 			break;
-		}
 	}
-	else
-		printf("값 범위 이탈. (0~9)");
-
-
 	return 0;
 }
