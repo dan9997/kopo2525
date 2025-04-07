@@ -21,6 +21,8 @@ int main()
             } else {
                 printf("%d(은)는 평범한 수!\n", a);
             }
+    } else {
+        printf("1~999 까지의 정수만 입력");
     }
     return 0;
 }
