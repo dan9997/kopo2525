@@ -45,7 +45,7 @@ int main()
 	    break;
         }
     } else {
- 	 printf("음수 입력 불가.\n");
+ 	    printf("음수 입력 불가.\n");
     }
 
     return 0;
