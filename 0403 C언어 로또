@@ -17,7 +17,7 @@ void main()
                i--;
             }
         }
-    sleep(1);
+        sleep(1);
     }
     
     for(int i = 0; i < 5; i++) {
