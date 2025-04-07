@@ -7,45 +7,46 @@ int main()
     scanf("%lf", &a);
 
     if (a >= 0) {
-	if (a >= 90) {
-		c = 'A';
-	}
-	else if (a >= 80) {
-		c = 'B';
-	}
-	else if (a >= 70) {
-		c = 'C';
-	}
-	else if (a >= 60) {
-		c = 'D';
-	}
-	else {
-		c = 'F';
-	}
+	    if (a >= 90) {
+	    	c = 'A';
+	    }
+	    else if (a >= 80) {
+	    	c = 'B';
+	    }
+	    else if (a >= 70) {
+	    	c = 'C';
+	    }
+	    else if (a >= 60) {
+	    	c = 'D';
+	    }
+	    else {
+	    	c = 'F';
+    	}
+    
+        switch (c) {
+        case 'A':
+	    printf("A등급 점수: %lf", a = a * 1.1);
+	    break;
 
-    switch (c) {
-	case 'A':
-	printf("A등급 점수: %lf", a = a * 1.1);
-	break;
+        case 'B':
+	    printf("B등급 점수: %lf", a = a * 1.05);
+	    break;
 
-	case 'B':
-	printf("B등급 점수: %lf", a = a * 1.05);
-	break;
+        case 'C':
+	    printf("C등급 점수: %lf", a);
+	    break;
 
-	case 'C':
-	printf("C등급 점수: %lf", a);
-	break;
+        case 'D':
+	    printf("D등급 점수: %lf", a);
+	    break;
 
-	case 'D':
-	printf("D등급 점수: %lf", a);
-	break;
-
-	case 'F':
-	printf("E등급 점수: %lf", a);
-	break;
- 	}
-    } else
- 	printf("음수 입력 불가.\n");
+        case 'F':
+	    printf("E등급 점수: %lf", a);
+	    break;
+        }
+    } else {
+ 	 printf("음수 입력 불가.\n");
+    }
 
     return 0;
 }
