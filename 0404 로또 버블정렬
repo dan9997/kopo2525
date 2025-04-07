@@ -14,7 +14,7 @@ void main()
 
         for (int j = 0; j < i; j++) {
             if (num[j] == num[i])
-                i--;
+            i--;
         }
         sleep(1);
     }
