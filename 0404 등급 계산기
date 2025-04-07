@@ -35,9 +35,9 @@ int main()
                 case 'F':
 	            printf("E등급 점수: %lf", a);
 	            break;
-                }
-            } else {
- 	        printf("음수 입력 불가.\n");
+                }    
+    } else {
+ 	    printf("음수 입력 불가.\n");
     }
 
     return 0;
