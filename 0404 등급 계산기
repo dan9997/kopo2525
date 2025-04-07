@@ -2,7 +2,6 @@
 
 int main()
 {
-
  double a = 0;
  char c;
  scanf("%lf", &a);
