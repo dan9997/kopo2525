@@ -28,21 +28,24 @@ int main()
 	case 'A':
 	printf("A등급 점수: %lf", a = a * 1.1);
 	break;
+
 	case 'B':
 	printf("B등급 점수: %lf", a = a * 1.05);
 	break;
+
 	case 'C':
 	printf("C등급 점수: %lf", a);
 	break;
+
 	case 'D':
 	printf("D등급 점수: %lf", a);
 	break;
+
 	case 'F':
 	printf("E등급 점수: %lf", a);
 	break;
  	}
- }
- else
+ } else
  	printf("음수 입력 불가.\n");
  return 0;
 }
