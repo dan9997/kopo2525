@@ -2,11 +2,11 @@
 
 int main()
 {
- double a = 0;
- char c;
- scanf("%lf", &a);
+    double a = 0;
+    char c;
+    scanf("%lf", &a);
 
- if (a >= 0) {
+    if (a >= 0) {
 	if (a >= 90) {
 		c = 'A';
 	}
@@ -23,7 +23,7 @@ int main()
 		c = 'F';
 	}
 
- switch (c) {
+    switch (c) {
 	case 'A':
 	printf("A등급 점수: %lf", a = a * 1.1);
 	break;
@@ -44,8 +44,8 @@ int main()
 	printf("E등급 점수: %lf", a);
 	break;
  	}
- } else
+    } else
  	printf("음수 입력 불가.\n");
 
- return 0;
+    return 0;
 }
