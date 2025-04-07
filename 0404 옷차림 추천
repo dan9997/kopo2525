@@ -4,7 +4,7 @@ int main()
 {
     double a = 0;
     int tem=0;
-    scanf_s("%lf", &a);
+    scanf("%lf", &a);
 
     if (a >= 30) {
    	tem = 1;
