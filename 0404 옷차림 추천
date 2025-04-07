@@ -25,8 +25,8 @@ int main()
 	    printf("너무 더워요 반팔과 반바지를 입으세요.\n");
 	    break;
         case 2:
-	   printf("따뜻한 날씨입니다! 가벼운 옷을 입으세요.\n");
-	   break;
+	    printf("따뜻한 날씨입니다! 가벼운 옷을 입으세요.\n");
+	    break;
         case 3:
 	    printf("선선한 날씨입니다! 가벼운 겉옷을 챙기세요.\n");
 	    break;
