@@ -13,8 +13,8 @@ void main()
         num[i] = (rand() % 45) + 1;
         printf("%d\n", num[i]);
         for (int j = 0; j < i; j++) {
-            if(num[j] == num[i]) {
-               i--;
+            if (num[j] == num[i]) {
+                i--;
             }
         }
         sleep(1);
