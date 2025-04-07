@@ -4,10 +4,10 @@ int main()
     int a, b, c, result;   
     scanf("%d %d %d", &a, &b, &c);  
 
-    if(c != 0){
+    if (c != 0) {
         result = (a + b) * c - (a - b) / c ;
         printf("%d", result);}
-    else{
+    else {
         printf("c에 0이 들어갈 수 없음.");
     } 
     return 0;
