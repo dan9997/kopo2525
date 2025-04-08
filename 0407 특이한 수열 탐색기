@@ -1,32 +1,31 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int main()
 {
     double b = 0, c = 0;
-    
-    int b2 = 0, b3 = 0, b4 = 0;
-    
-    scanf("%lf%lf", &b, &c);
-    
-    if((int)b % 1 == 0 && b > 0 && (int)c % 1 == 0 && c > 0){
-        for(b; b <= c; b++){
-            b2 = (int)b % 10;
-            b3 = ((int)b % 100 - b2) / 10; // 십의 자리
-            b4 = ((int)b % 1000 - b3 - b2) / 100; //백의자리
-    
-            if((int)b % 7  == 0 || (int)b2 % 10 == 7 || (int)b3 % 10 == 7 || (int)b4 % 10 == 7){
-               continue;
-            }
-            printf("숫자: %d \n", (int)b);
-            
-            if((int)b % 5 == 0)
-            {
-                break;
-            }
+
+    int b2, b3, b4, b5, b6, b7, b8, b9, b10;
+    int bol = 1;
+    char num[10];
+    scanf_s("%lf%lf", &b, &c);
+
+    for (int i = b; i < c; i++) {
+        bol = 1;
+        snprintf(num, sizeof(num), "%d", i);
+        for (int j = 0; j < sizeof(num); j++) {
+            if(num[j] == '7') {
+                bol = 0;
+            }     
         }
-    } else {
-        printf("1 이상의 정수만 입력 가능.");
+        if (bol == 0 || i % 7 == 0) {
+            continue;
+        } else if (i % 5 == 0) {
+            break;
+        } else {
+            printf("%d \n", i);
+        }
     }
-   
     return 0;
 }
