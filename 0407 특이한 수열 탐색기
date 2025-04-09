@@ -28,17 +28,14 @@ int main()
             }
             if (bol == 0 || i % 7 == 0) {
                 continue;
-            }
-            else if (i % 5 == 0) {
+            } else if (i % 5 == 0) {
                 printf("%d \n", i);
                 break;
-            }
-            else {
+            } else {
                 printf("%d \n", i);
             }
         }
-    }
-    else {
+    } else {
         printf("0보다 큰 정수 입력.");
     }
     return 0;
