@@ -6,10 +6,9 @@ int main()
 {
     double b = 0, c = 0;
 
-    int b2, b3, b4, b5, b6, b7, b8, b9, b10;
     int bol = 1;
     char num[10];
-    scanf_s("%lf%lf", &b, &c);
+    scanf("%lf%lf", &b, &c);
 
     for (int i = b; i < c; i++) {
         bol = 1;
