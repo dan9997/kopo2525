@@ -10,6 +10,8 @@ int main()
             printf("%d \n", i);
             i++;
         }
+    } else {
+        printf("0보다 큰 수 입력!");
     }
     return 0;
 }
