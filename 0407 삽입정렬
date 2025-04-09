@@ -5,9 +5,7 @@ void main()
 {
     int temp = 0, temp2 = 0;
     int num[6];
-
     srand(time(NULL));
-
     for (int i = 0; i < 6; i++) {
         num[i] = (rand() % 45) + 1;
         printf("%d ", num[i]);
@@ -17,9 +15,7 @@ void main()
             }
         }
     }
-    
     printf("\n");
-
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < i + 1 ; j++) {
             if (num[j] > num[i + 1]) {
@@ -37,5 +33,4 @@ void main()
     for (int i = 0; i < 6 ; i++) {
         printf("%d ", num[i]);
     }
-
 }
