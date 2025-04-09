@@ -16,24 +16,22 @@ void main()
                 i--;
             }
         }
-        //sleep(1);
     }
     
     printf("\n");
 
-     for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) {
         for (int j = 0; j < i + 1 ; j++) {
-            if (num[j] > num[i+1]) {
+            if (num[j] > num[i + 1]) {
                 temp = num[j];
-                num[j] = num[i+1];
-                num[i+1] = temp;
+                num[j] = num[i + 1];
+                num[i + 1] = temp;
             }  
         }
-        for(int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++)
         printf("%d ", num[i]);
         printf("\n");
     }
-    //버블 정렬.
     printf("결과 :");
     for (int i = 0; i < 6 ; i++) {
         printf("%d ", num[i]);
