@@ -12,7 +12,7 @@ int main()
             if (i == 2025 && j > 4){
                 continue;
             }
-            printf("%d%2d \n", i, j);
+            printf("%d%02d \n", i, j);
         }
     }
     
