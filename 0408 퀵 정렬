@@ -1,0 +1,39 @@
+#include <stdio.h> 
+
+int a[100];
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void quickSort(int start, int end) {
+    if (start >= end) return;
+    int key = start, i = start + 1, j = end, temp;
+    while (i <= j) {//배열을 2개로 나눔
+        while (i <= end && a[i] <= a[key]) i++;
+        //배열을 i부터 end까지 돌면서 a[i]가 피벗보다 큰 값을 만나는 때 까지
+        while (j > start && a[j] >= a[key]) j--;
+        //배열을 end부터 시작지점까지 돌면서 apj[가 피벗보다 작은 값을 만나는 때 까지
+        if (i > j) swap(&a[key], &a[j]);//i와j가 엇갈린 위치 j에 피벗을 넣는다.
+        else swap(&a[i], &a[j]);// 엇갈리지 않았다면 각 파티션에서 작은 값
+        // 큰 값을 찾은 것. 그래서 서로 바꿔줌.
+    }
+
+    quickSort(start, j - 1); //왼쪽 파티션 정렬하기
+    quickSort(j + 1, end); //오른쪽 파티션 정렬하기.
+}
+
+int main(void) {
+    int n;
+    scanf_s("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf_s("%d", &a[i]);
+    }
+    quickSort(0, n - 1);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    return 0;
+}
