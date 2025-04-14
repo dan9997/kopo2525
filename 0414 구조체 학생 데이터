@@ -11,11 +11,10 @@ typedef struct {
 
 int addStudent(Student list[], int *count, int max);
 void printStudents(Student list[], int count);
-
 Student list[1000] = {
-        {"hong", 30, "M", "soccer"},
-        {"kim",  20, "F", "book"},
-        {"sung", 29, "M", "baseball"}};
+        { "hong", 30, "M", "soccer" },
+        { "kim",  20, "F", "book"   },
+        { "sung", 29, "M", "baseball" }};
         
 int count = 3;
 
@@ -55,6 +54,15 @@ int addStudent(Student list[], int *count, int max) {
     }
     printf("성별\n");
     scanf("%s", temps);
+
+    
+    while(temps[0] != 'M' && temps[0] != 'F'){
+        printf("%s", temps);
+        printf("성별 입력 오류\n");
+        while (getchar() != '\n');
+        scanf("%s", temps);
+    }
+    
     printf("취미\n");
     scanf("%s", hobby);
 
