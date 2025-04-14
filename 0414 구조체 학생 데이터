@@ -13,9 +13,9 @@ int addStudent(Student list[], int *count, int max);
 void printStudents(const Student list[], int count);
 
 Student list[1000] = {
-        { "hong", 30, "M", "soccer" },
-        { "kim",  20, "F", "book"   },
-        { "sung", 29, "M", "baseball" }};
+        {"hong", 30, "M", "soccer"},
+        {"kim",  20, "F", "book"},
+        {"sung", 29, "M", "baseball"}};
         
 int count = 3;
 
