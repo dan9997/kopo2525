@@ -10,7 +10,7 @@ typedef struct {
 } Student;
 
 int addStudent(Student list[], int *count, int max);
-void printStudents(const Student list[], int count);
+void printStudents(Student list[], int count);
 
 Student list[1000] = {
         {"hong", 30, "M", "soccer"},
@@ -71,7 +71,7 @@ int addStudent(Student list[], int *count, int max) {
     return 1;
 }
 
-void printStudents(const Student list[], int count) {
+void printStudents(Student list[], int count) {
     
     for (int i = 0; i < count; i++) {
         printf("  %s %d %s %s\n", list[i].name, list[i].age, list[i].s, list[i].hobby);
