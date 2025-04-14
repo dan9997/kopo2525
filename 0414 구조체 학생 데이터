@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
 typedef struct {
     char *name;
     int age;
@@ -11,7 +9,7 @@ typedef struct {
     char *hobby;
 } Student;
 
-void addStudentFromInput(Student list[], int *count, int max);
+int addStudent(Student list[], int *count, int max);
 void printStudents(const Student list[], int count);
 
 Student list[1000] = {
@@ -34,7 +32,7 @@ int main() {
     return 0;
 }
 
-void addStudent(Student list[], int *count, int max) {
+int addStudent(Student list[], int *count, int max) {
     char name[100], temps[10], hobby[100];
     int age;
     int index = *count;
@@ -46,7 +44,12 @@ void addStudent(Student list[], int *count, int max) {
     printf("나이\n");
     exception = scanf("%d", &age);
     while(exception != 1){
-        printf("숫자 입력하세요 \n");
+        printf("정수만 입력하세요 \n");
+        while (getchar() != '\n');
+        exception = scanf("%d", &age);
+    }
+    while(age < 0){
+        printf("음수 입력 불가\n");
         while (getchar() != '\n');
         exception = scanf("%d", &age);
     }
@@ -65,6 +68,7 @@ void addStudent(Student list[], int *count, int max) {
     list[index].age = age;
 
     (*count)++;
+    return 1;
 }
 
 void printStudents(const Student list[], int count) {
