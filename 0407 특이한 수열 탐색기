@@ -4,12 +4,10 @@
 
 int main()
 {
-    double b = 0, c = 0;
-
-    int bol = 1;
-    int temp;
+    double b, c;
+    int bol = 1, temp;
     char num[10];
-    scanf("%lf%lf", &b, &c);
+    scanf("%lf %lf", &b, &c);
 
     if (b > c) {
         temp = b;
