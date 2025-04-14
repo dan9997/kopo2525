@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+typedef struct {
+    char *name;
+    int age;
+    char *s;
+    char *hobby;
+} Student;
+
+void addStudentFromInput(Student list[], int *count, int max);
+void printStudents(const Student list[], int count);
+
+Student list[1000] = {
+        { "hong", 30, "M", "soccer" },
+        { "kim",  20, "F", "book"   },
+        { "sung", 29, "M", "baseball" }};
+        
+int count = 3;
+
+int main() {
+    printf("학생 목록:\n");
+    printStudents(list, count);
+    while (count < 1000) {
+        printf("\n%d번째 학생 추가 시도 (현재: %d/%d)\n", count + 1, count, 1000);
+        if (addStudent(list, &count, 1000)) {
+            printf("\n------ 현재 학생 목록 (추가 후) ------\n");
+            printStudents(list, count);
+        }
+    }
+    return 0;
+}
+
+void addStudent(Student list[], int *count, int max) {
+    char name[100], temps[10], hobby[100];
+    int age;
+    int index = *count;
+    int exception;
+    printf("새 학생 정보를 입력하세요 (이름 나이 성별 취미): ");
+    
+    printf("이름\n");
+    scanf("%s", name);
+    printf("나이\n");
+    exception = scanf("%d", &age);
+    while(exception != 1){
+        printf("숫자 입력하세요 \n");
+        while (getchar() != '\n');
+        exception = scanf("%d", &age);
+    }
+    printf("성별\n");
+    scanf("%s", temps);
+    printf("취미\n");
+    scanf("%s", hobby);
+
+    list[index].name = malloc(strlen(name) + 1);
+    list[index].s = malloc(strlen(temps) + 1);
+    list[index].hobby = malloc(strlen(hobby) + 1);
+
+    strcpy(list[index].name, name);
+    strcpy(list[index].s, temps);
+    strcpy(list[index].hobby, hobby);
+    list[index].age = age;
+
+    (*count)++;
+}
+
+void printStudents(const Student list[], int count) {
+    
+    for (int i = 0; i < count; i++) {
+        printf("  %s %d %s %s\n", list[i].name, list[i].age, list[i].s, list[i].hobby);
+    }
+    printf("--------------------------------------\n");
+}
