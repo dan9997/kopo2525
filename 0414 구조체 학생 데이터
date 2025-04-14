@@ -51,7 +51,7 @@ int addStudent(Student list[], int *count, int max) {
     while(age < 0){
         printf("음수 입력 불가\n");
         while (getchar() != '\n');
-        exception = scanf("%d", &age);
+        scanf("%d", &age);
     }
     printf("성별\n");
     scanf("%s", temps);
