@@ -11,7 +11,7 @@ int main()
     int check;
     while (1) {
         check = scanf("%d", &a);
-        if (check != 0) {
+        if (check != 0 && a > 0) {
             switch (a) {
                 case 1:
                     c = 0;
