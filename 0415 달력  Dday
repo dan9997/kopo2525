@@ -27,8 +27,9 @@ void calender(int year, int month) {
     struct tm* t;
     timer = time(NULL);
     t = localtime(&timer);
-    int today = t->tm_yday;
-    int Dday = 0;
+    
+    int today = t->tm_yday + 1;
+    int day=0;
 
     for (int k = 2025; k <= year; k++) {
         if (k % 4 == 0) {
@@ -37,7 +38,7 @@ void calender(int year, int month) {
             mtday[1] = 28;
         }
         
-        for (m = jan + 1; m <= month; m++) {
+        for (m = jan + 1; m <= 12; m++) {
             if (m == month && k == year) {
                 switch (m) {
                 case 1:
@@ -97,14 +98,14 @@ void calender(int year, int month) {
                     printf(" %2d", i);
                 }
                 start++;
-                today++;
+                day++;
             } if (m == month && k == year) {
                 printf("\n");
+                break;
             }
             firstWeek = 1;
             
         }
-        Dday = today - t->tm_yday;
     }
-    printf("D-day: %d \n", Dday);
+    printf("D-day: %d", day - today);
 }
