@@ -71,6 +71,10 @@ int addStudent(Student list[], int *count, int max) {
     
     printf("1.취미, 2.etc\n");
     scanf("%d", &sel);
+    if(sel != 1 && sel != 2){
+        printf("1 또는 2 입력하세요.");
+        scanf("%d", &sel);
+    }
     scanf("%s", hobby);
 
     list[index].name = malloc(strlen(name) + 1);
