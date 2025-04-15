@@ -1,0 +1,50 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <string.h>
+
+enum carName { SEDAN, SUV, TRUCK, VAN };
+enum carName c;
+
+int main()
+{
+    int a;
+    while (1) {
+        if (scanf("%d", &a) != 0) {
+            switch (a) {
+            case 1:
+                c = 0;
+                break;
+            case 2:
+                c = 1;
+                break;
+            case 3:
+                c = 2;
+                break;
+            case 4:
+                c = 3;
+                break;
+            }
+
+            if (c == SEDAN) {
+                printf("입력한 차량은 SEDAN 입니다\n");
+            } else if (c == SUV) {
+                printf("입력한 차량은 SUV 입니다\n");
+            } else if (c == TRUCK) {
+                printf("입력한 차량은 TRUCK 입니다\n");
+            } else if (c == VAN) {
+                printf("입력한 차량은 VAN 입니다\n");
+            }
+        } else {
+            printf("잘못입력. 다시 입력하세요.\n");
+            while(getchar() != '\n');
+        }
+    }
+    return 0;
+}
