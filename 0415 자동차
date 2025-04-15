@@ -13,20 +13,19 @@ int main()
         check = scanf("%d", &a);
         if (check != 0) {
             switch (a) {
-            case 1:
-                c = 0;
-                break;
-            case 2:
-                c = 1;
-                break;
-            case 3:
-                c = 2;
-                break;
-            case 4:
-                c = 3;
-                break;
+                case 1:
+                    c = 0;
+                    break;
+                case 2:
+                    c = 1;
+                    break;
+                case 3:
+                    c = 2;
+                    break;
+                case 4:
+                    c = 3;
+                    break;
             }
-
             if (c == SEDAN) {
                 printf("입력한 차량은 SEDAN 입니다\n");
             } else if (c == SUV) {
