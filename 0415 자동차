@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-enum carName { SEDAN, SUV, TRUCK, VAN };
+enum carName {SEDAN, SUV, TRUCK, VAN};
 enum carName c;
 
 
