@@ -1,0 +1,119 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+//달력. 윤년 생각해서 달력 만들기. year 입력하세요. month 입력하세요. 함수처리리
+// D-day 계산하기. 20250705 라고 했을 때, 20250705로 부터 D-100일 입니다.
+#include <stdio.h>
+#include <time.h>
+void calender(int year, int month);
+
+
+int main()
+{
+    int year, month;
+
+    printf("년도 월 입력");
+    scanf("%d %d", &year, &month);
+    printf("\n");
+    calender(year, month);
+
+    return 0;
+}
+
+
+void calender(int year, int month) {
+    enum month {jan, feb, mar, apr, may, hun, hul, aug, sep, oct, nov, dec};
+    enum day {sun, mon, tue, wed, thu, fri, sat};
+    enum month m;
+    enum day w;
+    int mtday[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, start = 4, firstWeek = 1;
+    
+    time_t timer;
+    struct tm* t;
+    timer = time(NULL);
+    t = localtime(&timer);
+    int today = t->tm_yday;
+    int Dday = 0;
+    printf("디데이. %d\n\n\n", today);
+
+    for (int k = 2025; k <= year; k++) {
+        if (k % 4 == 0) {
+            mtday[1] = 29;
+        } else {
+            mtday[1] = 28;
+        }
+        
+        for (m = jan + 1; m <= month; m++) {
+            if (m == month && k == year) {
+                switch (m) {
+                case 1:
+                    printf("       %d jan\n", year);
+                    break;
+                case 2:
+                    printf("       %d feb\n", year);
+                    break;
+                case 3:
+                    printf("       %d mar\n", year);
+                    break;
+                case 4:
+                    printf("       %d apr\n", year);
+                    break;
+                case 5:
+                    printf("       %d may\n", year);
+                    break;
+                case 6:
+                    printf("       %d jun\n", year);
+                    break;
+                case 7:
+                    printf("       %d jul\n", year);
+                    break;
+                case 8:
+                    printf("       %d aug\n", year);
+                    break;
+                case 9:
+                    printf("       %d sep\n", year);
+                    break;
+                case 10:
+                    printf("       %d oct\n", year);
+                    break;
+                case 11:
+                    printf("       %d nov\n", year);
+                    break;
+                case 12:
+                    printf("       %d dec\n", year);
+                    break;
+                }
+                printf("  s  m  t  w  t  f  s \n");
+            }
+
+            for (int i = 1; i <= mtday[m - 1]; i++) {
+                if (firstWeek == 1) {
+                    for (int j = 0; j < start - 1; j++) {
+                        if (m == month && k == year) {
+                            printf("   ");
+                        }
+                    }
+                    firstWeek = 0;
+                } if (start == 8) {
+                    start = 1;
+                    if (m == month && k == year) {
+                        printf("\n");
+                    }
+                } if (m == month && k == year) {
+                    printf(" %2d", i);
+                }
+                start++;
+                today++;
+            } if (m == month && k == year) {
+                printf("\n");
+            }
+            firstWeek = 1;
+        }
+        Dday = today - t->tm_yday;
+    }
+    printf("D-day: %d \n", Dday);
+}
