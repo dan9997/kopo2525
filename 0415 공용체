@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+union val{
+    int intVal;
+    float floatVal;
+    char charVal;
+};
+
+
+int main()
+{
+    union val v;
+    v.intVal = 10;
+    printf("%d %d\n",v.intVal,&v.intVal);
+    
+    v.floatVal = 10.2;
+    printf("%f %d\n", v.floatVal, &v.floatVal);
+    
+    v.charVal = 'c';
+    printf("%c %d\n", v.charVal, &v.charVal);
+    
+    printf("최종 값.int: %d float: %f char: %c 주소값 int: %d float: %d char: %d", v.intVal, v.floatVal, v.charVal,
+    &v.intVal, &v.floatVal, &v.charVal);
+    return 0;
+}
