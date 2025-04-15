@@ -2,7 +2,6 @@
 #include <time.h>
 void calender(int year, int month);
 
-
 int main()
 {
     int year, month;
@@ -15,12 +14,11 @@ int main()
     return 0;
 }
 
-
 void calender(int year, int month) {
-    enum month {jan, feb, mar, apr, may, hun, hul, aug, sep, oct, nov, dec};
-    enum day {sun, mon, tue, wed, thu, fri, sat};
+    enum month {jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
+    enum days {sun, mon, tue, wed, thu, fri, sat};
     enum month m;
-    enum day w;
+    enum days w;
     int mtday[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, start = 4, firstWeek = 1;
     
     time_t timer;
@@ -37,50 +35,48 @@ void calender(int year, int month) {
         } else {
             mtday[1] = 28;
         }
-        
         for (m = jan + 1; m <= 12; m++) {
             if (m == month && k == year) {
-                switch (m) {
-                case 1:
-                    printf("       %d jan\n", year);
-                    break;
-                case 2:
-                    printf("       %d feb\n", year);
-                    break;
-                case 3:
-                    printf("       %d mar\n", year);
-                    break;
-                case 4:
-                    printf("       %d apr\n", year);
-                    break;
-                case 5:
-                    printf("       %d may\n", year);
-                    break;
-                case 6:
-                    printf("       %d jun\n", year);
-                    break;
-                case 7:
-                    printf("       %d jul\n", year);
-                    break;
-                case 8:
-                    printf("       %d aug\n", year);
-                    break;
-                case 9:
-                    printf("       %d sep\n", year);
-                    break;
-                case 10:
-                    printf("       %d oct\n", year);
-                    break;
-                case 11:
-                    printf("       %d nov\n", year);
-                    break;
-                case 12:
-                    printf("       %d dec\n", year);
-                    break;
+                switch (m-1) {
+                    case jan:
+                        printf("       %d jan\n", year);
+                        break;
+                    case feb:
+                        printf("       %d feb\n", year);
+                        break;
+                    case mar:
+                        printf("       %d mar\n", year);
+                        break;
+                    case apr:
+                       printf("       %d apr\n", year);
+                       break;
+                    case may:
+                        printf("       %d may\n", year);
+                        break;
+                    case jun:
+                        printf("       %d jun\n", year);
+                        break;
+                    case jul:
+                        printf("       %d jul\n", year);
+                        break;
+                    case aug:
+                        printf("       %d aug\n", year);
+                        break;
+                    case sep:
+                        printf("       %d sep\n", year);
+                        break;
+                    case oct:
+                        printf("       %d oct\n", year);
+                        break;
+                    case nov:
+                        printf("       %d nov\n", year);
+                        break;
+                    case dec:
+                        printf("       %d dec\n", year);
+                        break;
                 }
                 printf("  s  m  t  w  t  f  s \n");
             }
-
             for (int i = 1; i <= mtday[m - 1]; i++) {
                 if (firstWeek == 1) {
                     for (int j = 0; j < start - 1; j++) {
@@ -104,7 +100,6 @@ void calender(int year, int month) {
                 break;
             }
             firstWeek = 1;
-            
         }
     }
     printf("D-day: %d", day - today);
