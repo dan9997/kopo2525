@@ -3,7 +3,7 @@
 int main()
 {
     int k;
-    printf(" 입력 값(최대 값) : ");
+    printf("입력 값(최대 값) : ");
     scanf("%d", &k);
     pibo(k);
     return 0;
@@ -12,7 +12,7 @@ int main()
 void pibo(int k){
     int a = 0, b = 1, temp, sum = 0;
     int one = 0, two = 0;
-    
+    printf("출력 값\n");
     while(b <= k){
         temp = a + b;
         a = b;
@@ -23,7 +23,9 @@ void pibo(int k){
             one++;
         }
         sum = sum + a;
-        printf(" %d ", a);
+        printf("%d ", a);
     }
-    printf("\n 합 : %d \n 홀/짝 : %d/%d\n",sum, one, two);
+    
+    
+    printf("\n합 : %d \n홀/짝 : %d/%d\n",sum, one, two);
 }
