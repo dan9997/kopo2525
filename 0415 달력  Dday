@@ -1,24 +1,52 @@
 #include <stdio.h>
 #include <time.h>
-void calender(int year, int month, int dday);
+void calender(int year, int month);
 
 int main()
 {
     int year, month, dday, year2, month2, dday2;
-    
     while(1){
     printf("\n yyyy mm입력 \n");
     scanf("%d %d", &year, &month);
     printf("\n D-day. yyyy mm dd 입력\n ");
-    scanf("%d %d %d", &year, &month, &dday);
-    printf("\n");
-    calender(year, month, dday);
+    scanf("%d %d %d", &year2, &month2, &dday);
+    calender(year, month);
+    D_day(year2, month2, dday);
     }
-
     return 0;
 }
 
-void calender(int year, int month, int dday) {
+void D_day(int year, int month, int day){
+    int mtday[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int month2 = month - 1;
+    int dday = 0;
+    
+    time_t timer;
+    struct tm* t;
+    timer = time(NULL);
+    t = localtime(&timer);
+    int today = t->tm_yday + 1;
+    
+    for(int i = 2025; i <= year; i++){
+        if (i % 4 == 0){
+            mtday[1] = 29;
+        }
+        for(int j = 0; j < 12; j++){
+            for(int k = 1; k <= mtday[j]; k++){
+                dday++;
+                if(i == year && j == month2 && k == day){
+                    printf("\nD-day: %d", dday - today);
+                    return 1;
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+void calender(int year, int month) {
     enum month {jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
     enum days {sun, mon, tue, wed, thu, fri, sat};
     enum month m;
@@ -29,7 +57,6 @@ void calender(int year, int month, int dday) {
     timer = time(NULL);
     t = localtime(&timer);
     int today = t->tm_yday + 1;
-    int day=0, dayCount = 0;
     for (int k = 2025; k <= year; k++) {
         if (k % 4 == 0) {
             mtday[1] = 29;
@@ -109,19 +136,13 @@ void calender(int year, int month, int dday) {
                     printf(" %2d", i);
                 }         
                 start++;                
-                if(m == month && k == year && i == dday){ 
-                dayCount = 1;
-                }              
-                if(dayCount == 0){
-                    day++;
-                }
             }
             if (m == month && k == year) {
-                printf("\n----------------------\n");
+
                 break;
             }
             firstWeek = 1;
         }
     }
-    printf(" D-day: %d", day - today + 1 );
+
 }
