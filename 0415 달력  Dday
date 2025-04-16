@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 void calender(int year, int month);
+void D_day(int year, int month, int day);
 
 int main()
 {
@@ -40,15 +41,18 @@ void D_day(int year, int month, int day){
                 }
             }
         }
-    } 
+    }
+    
+    
+    
 }
 
 void calender(int year, int month) {
     enum month {jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
     enum days {sun, mon, tue, wed, thu, fri, sat};
     enum month m;
-    enum days w;
-    int mtday[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, start = 4, firstWeek = 1; 
+    enum days w = wed;
+    int mtday[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, firstWeek = 1; 
     time_t timer;
     struct tm* t;
     timer = time(NULL);
@@ -116,15 +120,15 @@ void calender(int year, int month) {
             }
             for (int i = 1; i <= mtday[m - 1]; i++) {
                 if (firstWeek == 1) {
-                    for (int j = 0; j < start - 1; j++) {
+                    for (int j = 0; j < w; j++) {
                         if (m == month && k == year) {
                             printf("   ");
                         }
                     }
                     firstWeek = 0;
                 }                
-                if (start == 8) {
-                    start = 1;
+                if (w == sat + 1) {
+                    w = sun;
                     if (m == month && k == year) {
                         printf("\n");
                     }
@@ -132,9 +136,10 @@ void calender(int year, int month) {
                 if (m == month && k == year) {
                     printf(" %2d", i);
                 }         
-                start++;                
+                w++;                
             }
             if (m == month && k == year) {
+
                 break;
             }
             firstWeek = 1;
