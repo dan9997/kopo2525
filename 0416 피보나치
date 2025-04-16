@@ -2,17 +2,16 @@
 
 int main()
 {
-    pibo();
-    
+    int k;
+    printf(" 입력 값(최대 값) : ");
+    scanf("%d", &k);
+    pibo(k);
     return 0;
 }
 
-void pibo(){
-    printf("Hello World");
-    int k;
+void pibo(int k){
     int a = 0, b = 1, temp, sum = 0;
     int one = 0, two = 0;
-    scanf("%d", &k);
     
     while(b <= k){
         temp = a + b;
@@ -24,7 +23,9 @@ void pibo(){
             one++;
         }
         sum = sum + a;
-        printf("%d \n", a);
+        printf(" %d ", a);
     }
-    printf("합 : %d \n홀/짝 : %d/%d\n",sum, one, two);
+    
+    
+    printf("\n 합 : %d \n 홀/짝 : %d/%d\n",sum, one, two);
 }
