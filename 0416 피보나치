@@ -25,7 +25,5 @@ void pibo(int k){
         sum = sum + a;
         printf(" %d ", a);
     }
-    
-    
     printf("\n 합 : %d \n 홀/짝 : %d/%d\n",sum, one, two);
 }
