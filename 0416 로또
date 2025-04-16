@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+
+
+#define MAX_LINE_LEN 2048
+#define MAX_FIELD_LEN 256
+
+file(int* pFile);
+
+int main() {
+    
+    FILE* pFile = NULL;
+    pFile = fopen("lotto.csv", "r");
+    file(pFile);
+    return 0;
+}
+
+int file(int* pFile) {
+    char str_tmp[1024];
+    char* p;
+    int cnt, sum, i, min, max;
+    int b[7];
+    int count = 0;
+    if (pFile != NULL) {
+        while (!feof(pFile)) {
+            fgets(str_tmp, 1024, pFile);
+            cnt = 0;
+            sum = 0;
+            min = 46;
+            max = 0;
+            p = strtok(str_tmp, ",");
+            while (p != NULL) {
+                b[cnt] = atoi(p);
+                cnt++;
+                p = strtok(NULL, ",");
+            }
+            for (i = 0; i < cnt; i++) {
+                if (min > b[i]) {
+                    min = b[i];
+                }
+                if (max < b[i]) {
+                    max = b[i];
+                }
+                sum += b[i];
+                printf("%d ", b[i]);
+            }
+            count++;
+            printf(" -> %d번째 합 : % d 최솟값 : %d 최댓값 : %d 평균값 : %d ", count, sum, min, max, sum / 7);
+            printf("\n");
+        }
+    }
+    fclose(pFile);
+    return 1;
+}
