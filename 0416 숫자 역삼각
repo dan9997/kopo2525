@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("입력 값(줄 수) : ");
+    int b;
+    
+    scanf("%d", &b);
+    tri(b);
+    return 0;
+}
+
+int tri(int b){
+    int a = 1;
+    for(int i = 0; i < b + 1; i++){
+        for(int j = b - i; j > 0; j--){
+            printf("  ");
+        }
+        for(int j = i; j > 0; j--){
+            printf("%3d ", a);
+        a++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
