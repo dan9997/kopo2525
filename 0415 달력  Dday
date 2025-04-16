@@ -139,7 +139,6 @@ void calender(int year, int month) {
                 w++;                
             }
             if (m == month && k == year) {
-
                 break;
             }
             firstWeek = 1;
