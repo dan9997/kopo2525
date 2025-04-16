@@ -3,17 +3,17 @@
 int main()
 {
     int k;
-    printf("입력 값(최대 값) : ");
+    printf("출력할 피보나치 수열 개수 : ");
     scanf("%d", &k);
     pibo(k);
     return 0;
 }
 
-void pibo(int k){
+int pibo(int k){
     int a = 0, b = 1, temp, sum = 0;
     int one = 0, two = 0;
     printf("출력 값\n");
-    while(b <= k){
+    for(int i = 0; i < 10; i++){
         temp = a + b;
         a = b;
         b = temp;
@@ -28,4 +28,5 @@ void pibo(int k){
     
     
     printf("\n합 : %d \n홀/짝 : %d/%d\n",sum, one, two);
+    return 0;
 }
