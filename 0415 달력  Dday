@@ -31,6 +31,8 @@ void D_day(int year, int month, int day){
     for(int i = 2025; i <= year; i++){
         if (i % 4 == 0){
             mtday[1] = 29;
+        } else {
+            myday[1] = 28;
         }
         for(int j = 0; j < 12; j++){
             for(int k = 1; k <= mtday[j]; k++){
@@ -42,9 +44,6 @@ void D_day(int year, int month, int day){
             }
         }
     }
-    
-    
-    
 }
 
 void calender(int year, int month) {
