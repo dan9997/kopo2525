@@ -10,7 +10,7 @@ int main()
 void pibo(){
     printf("Hello World");
     int k;
-    int a = 0, b = 1, temp;
+    int a = 0, b = 1, temp, sum = 0;
     int one = 0, two = 0;
     scanf("%d", &k);
     
@@ -23,7 +23,8 @@ void pibo(){
         } else {
             one++;
         }
+        sum = sum + a;
         printf("%d \n", a);
     }
-    printf("홀수: %d, 짝수: %d\n", one, two);
+    printf("총 합: %d 홀수: %d, 짝수: %d\n",sum, one, two);
 }
