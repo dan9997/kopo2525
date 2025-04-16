@@ -40,10 +40,7 @@ void D_day(int year, int month, int day){
                 }
             }
         }
-    }
-    
-    
-    
+    } 
 }
 
 void calender(int year, int month) {
@@ -138,7 +135,6 @@ void calender(int year, int month) {
                 start++;                
             }
             if (m == month && k == year) {
-
                 break;
             }
             firstWeek = 1;
