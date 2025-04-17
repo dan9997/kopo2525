@@ -18,9 +18,9 @@ int main() {
 }
 
 int file(int* pFile) {
-    char str_tmp[1024];
+    char str_tmp[50];
     char* p;
-    int cnt, sum, i, min, max;
+    int cnt, sum, i, min, max, smin = 999, smax = 0, ssum = 0;
     int b[7];
     int count = 0;
     if (pFile != NULL) {
@@ -43,13 +43,23 @@ int file(int* pFile) {
                 if (max < b[i]) {
                     max = b[i];
                 }
-                sum += b[i];
+                sum  = sum + b[i];  
+                if (smin > sum) {
+                    smin = sum;
+                }
+                if (smax < sum) {
+                    smax = sum;
+                }
                 printf("%d ", b[i]);
             }
+            
+            ssum = ssum + sum;
             count++;
-            printf(" -> %d번째 합 : % d 최솟값 : %d 최댓값 : %d 평균값 : %d ", count, sum, min, max, sum / 7);
+            printf(" -> %d번째의 합 : % d 최솟값 : %d 최댓값 : %d 평균값 : %d ", count, sum, min, max, sum / 7);
+            
             printf("\n");
         }
+        printf("전체 당첨 회차별 합의 최솟값 : %d, 최댓값 : %d, 평균값 : %d\n", smin, smax, ssum / 567);
     }
     fclose(pFile);
     return 1;
