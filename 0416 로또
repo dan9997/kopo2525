@@ -2,12 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
-
-#define MAX_LINE_LEN 2048
-#define MAX_FIELD_LEN 256
-
-file(int* pFile);
+int file(int* pFile);
 
 int main() {
     
